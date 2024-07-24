@@ -1,0 +1,226 @@
+#recipeA, #recipeB {
+	width: min(100vw, max(60vw, 600px));
+	position: absolute;
+	left: max(0px, calc(60vw - max(calc(60vw / 2), calc(600px / 2))));
+	top: 20%;
+	rotate: 0deg;
+}
+
+#backgroundA, #backgroundB {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: antiquewhite;
+	filter: url(#squiggle1) blur(0.3px);
+	z-index: -1;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+#contentA, #contentB {
+	padding: 20px;
+}
+
+#recipetexts {
+	display: none;
+}
+
+#background {
+	position: fixed;
+	left: -15%;
+	top: -15%;
+	width: 130%;
+	height: 130%;
+	background-image: url("../img/background.png");
+	background-size: 1500px auto;
+	filter: blur(0.5px) brightness(90%) sepia(0%);
+	opacity: 80%;
+	z-index: -2;
+	animation: movingBackground 400s linear infinite;
+}
+
+#navbar {
+	z-index: 1;
+	position: fixed;
+	width: 100%;
+}
+
+#backgroundNavbar {
+	position: absolute;
+	width: 100vw;
+	height: 175%;
+	background-image: linear-gradient(black, black, rgba(0, 0, 0, 0));
+	opacity: 30%;
+	z-index: -1;
+}
+
+#contentNavbar {
+	max-width: 480px;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	margin:auto;
+}
+
+#imgCheck {
+	user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	font-size: smaller;
+	color: darkgray;
+}
+
+#recipeImgs img {
+	position: absolute;
+	width: min(100vw, max(60vw, 600px));
+	left: 0px;
+	margin-top: 50px;
+}
+
+.nav {
+	display: inline-block;
+	font-family: "Slabo";
+	position: relative;
+	background: none;
+	border: none;
+	padding: 4px 4px 1px 4px;
+	transition: ease 0.3s;
+}
+
+.hright:hover {
+	rotate: 10deg;
+	transition: ease 0.3s;
+	padding: 4px 4px 1px 4px;
+}
+
+.hleft:hover {
+	rotate: -10deg;
+	transition: ease 0.3s;
+	padding: 4px 4px 1px 4px;
+}
+
+.backgroundNav {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: antiquewhite;
+	z-index: -1;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+	padding: inherit;
+}
+
+.squiggle {
+	filter: url(#squiggle1) blur(0.3px);
+}
+
+.altSquiggle {
+	filter: url(#squiggle2) blur(0.3px);
+}
+
+.altAltSquiggle {
+	filter: url(#squiggle3) blur(0.3px);
+}
+
+html {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	margin: 0px;
+	overflow-x: hidden;
+	font-family: "Slabo";
+	font-size: small;
+}
+
+body, html {
+	overflow-x: hidden;
+}
+
+h1 {
+	font-family: "Vast Shadow", "Comic Sans MS";
+	font-size: x-large;
+	margin: -5px 0px 10px 0px;
+}
+
+ul {
+	padding-left: 10px;
+	list-style-position: inside;
+	margin: 0px;
+}
+
+h4 {
+	margin: 3px 0px;
+}
+
+p {
+	margin: 0px;
+}
+
+b {
+	font-weight: bold;
+	font-family: Ladylike;
+	color: darkslategray;
+	font-size: medium;
+	padding-left: 10pt;
+}
+
+input[type="checkbox"] {
+	margin: 0px 0px 0px 5px;
+	appearance: none;
+	-webkit-appearance: none;
+	align-content: center;
+	justify-content: center;
+	display: inline flex;
+	border: 1px solid darkgray;
+	border-radius: 1.5px;
+	transition: ease 0.5s;
+}
+
+input[type="checkbox"]::before {
+	content: "";
+	width: 7px;
+	height: 7px;
+	transform: scale(0);
+	background-color: darkslategray;
+	transition: ease 0.2s;
+}
+
+input[type="checkbox"]:checked::before {
+	transform: scale(1);
+	border: 1px solid darkslategray;
+}
+
+input[type="checkbox"]:hover {
+	background-color: darkgray;
+	transition: ease 0.5s;
+}
+
+@keyframes movingBackground {
+	from {
+		background-position: 0px 0px;
+	}
+	to {
+		background-position: -1500px -1500px;
+	}
+}
+
+@font-face {
+	font-family: Ladylike;
+	src: url(../font/LadylikeBB.ttf);
+}
+
+@font-face {
+	font-family: Slabo;
+	src: url(../font/Slabo27px.ttf);
+}
+
+@font-face {
+	font-family: Vast Shadow;
+	src: url(../font/VastShadow.ttf);
+}

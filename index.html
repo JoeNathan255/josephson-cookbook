@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Josephson Cookbook</title>
+
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/script.js" defer></script>
+</head>
+
+<body>
+	<div id="background"></div>
+
+	<div id="navbar">
+		<div id="backgroundNavbar"></div>
+		<div id="contentNavbar">
+			<button class="nav hleft" onclick="changeRecipe('fav', 'left')">
+				<div class="backgroundNav altSquiggle"></div>
+				<img src="./img/nav/leftstar.png" width="33px">
+			</button>
+			<button class="nav hleft" onclick="changeRecipe('ten', 'left')">
+				<div class="backgroundNav altAltSquiggle"></div>
+				<img src="./img/nav/leftdouble.png" width="33px">
+			</button>
+			<button class="nav hleft" onclick="changeRecipe('one', 'left')">
+				<div class="backgroundNav squiggle"></div>
+				<img src="./img/nav/leftsingle.png" width="33px">
+			</button>
+			<button class="nav hright" onclick="changeRecipe('one', 'right')">
+				<div class="backgroundNav altSquiggle"></div>
+				<img src="./img/nav/rightsingle.png" width="33px">
+			</button>
+			<button class="nav hright" onclick="changeRecipe('ten', 'right')">
+				<div class="backgroundNav squiggle"></div>
+				<img src="./img/nav/rightdouble.png" width="33px">
+			</button>
+			<button class="nav hright" onclick="changeRecipe('fav', 'right')">
+				<div class="backgroundNav altAltSquiggle"></div>
+				<img src="./img/nav/rightstar.png" width="33px">
+			</button>
+		</div>
+	</div>
+
+	<div id="recipeA">
+		<div id="backgroundA"></div>
+		<div id="contentA">
+			<h1 id="recipeAname">
+				&nbsp;
+			</h1>
+			<div id="recipeAtext">
+				&nbsp;
+			</div>
+			<div id="imgCheck">
+				<br>
+				Show original <input type="checkbox" id="imgCheckbox" onclick="showImages()">
+			</div>
+			<div id="recipeImgs">
+			</div>
+		</div>
+	</div>
+
+	<div id="recipeB">
+		<div id="backgroundB"></div>
+		<div id="contentB">
+			<h1 id="recipeBname">
+				&nbsp;
+			</h1>
+			<div id="recipeBtext">
+				&nbsp;
+			</div>
+			<div id="imgCheck">
+				<br>
+				Show original <input type="checkbox">
+			</div>
+		</div>
+	</div>
+
+	<div id="recipetexts">
+		<!--------------------------------------->
+
+		<div id="r0" class="">
+			<h1 id="t0">[recipe name]</h1>
+			<div id="c0">
+				<h4>Ingredients:¼½¾×</h4>
+				<ul type="disc">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<h4></h4>
+					<ul type="circle">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</ul>
+				<br>
+				<h4>Directions</h4>
+				<p>
+					Preheat oven to °.
+				</p>
+			</div>
+			<div id="i0">
+				<img src="img/recipes/">
+			</div>
+		</div>
+
+		<!--------------------------------------->
+
+		<div id="r1" class="favorite a">
+			<h1 id="t1">Grandma Val's Apple Dumplings</h1>
+			<div id="c1">
+				<h4>Ingredients:</h4>
+				<ul type="disc">
+					<li>5 shakes salt</li>
+					<li>½ cube butter, sliced</li>
+					<li>⅓ C sugar</li>
+					<li>½ t nutmeg</li>
+					<h4>Dough:</h4>
+					<ul type="circle">
+						<li>3 C flour</li>
+						<li>1 t baking powder</li>
+						<li>1½ t salt</li>
+						<li>¾ c + 1 T shortening</li>
+						<li>¾ C water, cold</li>
+						
+					</ul>
+					<h4>Filling:</h4>
+					<ul type="circle">
+						<li>7-8 apples, spiralized and quartered</li>
+						<li>2 t sugar</li>
+						<li>Sprinkle of nutmeg</li>
+						<li>Dab of butter</li>
+						
+					</ul>
+				</ul>
+				<br>
+				<h4>Directions</h4>
+				<p>
+					Preheat oven to 400°. Fill cake pan halfway with hot water and add salt, butter, sugar, and nutmeg. Mix dough, and separate into 8 sections. In each section of dough, add sugar, nutmeg, butter, and apples (preparing more as necessary). Bake for 1 hr.
+				</p>
+			</div>
+			<div id="i1">
+				<img src="img/recipes/Apple Dumplings, Grandma Val_s.jpg">
+			</div>
+		</div>
+
+		<!--------------------------------------->
+
+		<div id="r2" class="b">
+			<h1 id="t2">New York Style Bagels</h1>
+			<div id="c2">
+				<h4>Ingredients:</h4>
+				<ul type="disc">
+					<li>2 t active yeast, dry</li>
+					<li>4½ t sugar</li>
+					<li>1¼ C water, warm<b>up to 1/4 C more in dry climates!</b></li>
+					<li>3½ cups bread flour</li>
+					<li>1½ t salt</li>
+				</ul>
+				<br>
+				<h4>Directions</h4>
+				<p>
+					Add sugar and yeast to ½ C of warm water without stirring. Let sit for 5 min, then stir the mixture until fully dissolved. Mix the flour and salt in a large bowl. Make a well in the middle and pour in the yeast and sugar mixture. Pour ⅓ C of the warm water into the well. Stir in the remaining ⅔ C water.<br>
+					<b>use your extra water here if you need! you want a moist, firm dough.</b><br>
+					On a floured countertop, knead dough until smooth and elastic (about 10 mins). Work in as much flour as possible to form a firm, stiff dough. Lightly brush a large bowl with oil and turn the dough to coat. Cover the bowl with a damp dish towel. Let rise in a warm place for 1 hr, until the dough has doubled in size. Punch it down, then let rest for another 10 mins.<br>
+					<br>
+					Carefully divide the dough into 8 pieces. Shape each into a round, then take a dough ball and press it gently against the countertop, moving your hand and the ball in a circular motion to pull the dough into itself while gradually reducing the pressure on top. Once you've formed a perfect dough ball, repeat with the other 7 rounds.<br>
+					<br>
+					Coat a finger in flour and gently press it ito the center of eaach dough ball to form rings. Stretch each ring to about ⅓ the diameter of the bagel and place on a lightly oiled cookie sheet. After shaping the bagels and placing them on the cookie sheet, cover with a damp towel and let rest for 10 mins. Meanwhile, preheat oven to 425°.<br>
+					<br>
+					Bring a large pot of water to a boil. Reduce the heat, then use a slotted spoon or skimmer to lower bagels into the water. They should float to the top within several seconds. Let sit for 1 minute, then flip to boil for another.<br>
+					<b>extend times to 2 minutes for chewier bagels! cook as many at once as you are comfortable with.</b><br>
+					If you want to add toppings, do so as you take them out of the water (alternatively, you can use an egg wash to help toppings better adhere). Once all the bagels have been boiled, transfer them to an oiled or parchment-lined baking sheet. Bake for 20-25 mins, or until golden brown. Cool on a wire rack.<br>
+					<b>or, if you're impatient like I am, slice on of these babies open and spread on some of your favorite cream cheese or softened butter: take a bite... oh babyyy!</b>	
+				</p>
+			</div>
+			<div id="i2">
+				<img src="img/recipes/Bagels, New York Style (1).jpg">
+				<img src="img/recipes/Bagels, New York Style (2).jpg">
+			</div>
+		</div>
+
+		<!--------------------------------------->
+
+		<div id="r3" class="b">
+			<h1 id="t3">Dutch Oven Baked Beans</h1>
+			<div id="c3">
+				<h4>Ingredients:</h4>
+				<ul type="disc">
+					<li>¾ lb bacon</li>
+					<li>1 lb ground beef</li>
+					<li>1 onion, chopped</li>
+					<li>1 can kidney beans (large)</li>
+					<li>1 can lima beans, buttered</li>
+					<li>1 can pork and beans</li>
+					<li>1 C brown sugar</li>
+					<li>1 T vinegar</li>
+					<li>1 T liquid smoke</li>
+					<li>1 C ketchup</li>
+				</ul>
+				<br>
+				<h4>Directions</h4>
+				<p>
+					Brown beef with onion and pour off most of the grease. Add remaining ingredients and cook in dutch oven for 1½-2 hrs.<br>
+					<b>YUM!!!</b>
+				</p>
+			</div>
+			<div id="i3">
+				<img src="img/recipes/Baked Beans, Dutch Oven.jpg">
+			</div>
+		</div>
+
+		<!--------------------------------------->
+
+		<div id="r4" class="b">
+			<h1 id="t4">Baked Beans</h1>
+			<div id="c4">
+				<h4>Ingredients:</h4>
+				<ul type="disc">
+					<li>2 cans pork and beans (large)</li>
+					<li>1 8oz can tomato sauce</li>
+					<li>½ C brown sugar</li>
+					<li>½ t mustard</li>
+					<li>½ t worcestershire sauce</li>
+					<li>⅛ t Tabasco sauce</li>
+					<li>1 onion, diced (large)</li>
+					<li>1 lb bacon, cooked & dried</li>
+					<li>½ green bell pepper, diced</li>
+				</ul>
+				<br>
+				<h4>Directions</h4>
+				<p>
+					Preheat oven to 350°. Combine all ingredients in large bowl and bake for 1½ hrs.<br>
+				</p>
+			</div>
+			<div id="i4">
+				<img src="img/recipes/Baked Beans.jpg">
+			</div>
+		</div>
+
+		<!--------------------------------------->
+
+		<div id="r5" class="favorite b">
+			<h1 id="t5">Breadsticks</h1>
+			<div id="c5">
+				<h4>Ingredients:</h4>
+				<ul type="disc">
+					<li>2 C flour</li>
+					<li>2 T sugar</li>
+					<li>1 t salt</li>
+					<li>1 T instant yeast</li>
+					<li>1½ C water, hot</li>
+					<li>1½ C flour</li>
+					<li>1 stick butter, melted</li>
+					<h4>To taste:</h4>
+					<ul type="circle">
+						<li>Garlic salt</li>
+						<li>Parmesean, grated</li>
+						<li>Sesame seeds</li>
+					</ul>
+				</ul>
+				<br>
+				<h4>Directions</h4>
+				<p>
+					Preheat oven to 400°. Combine flour, sugar, salt, yeast, and water in large bowl. Add flour slowly. Knead for 10 min and let raise until dough doubles in size. Roll out in 10×14" rectangle and cut into 1×4" strips.<br>
+					<br>
+					Coat bottom of 10×14" cake pan with butter, fold strips in half, and twist, before laying lengthwise in cake pan. Sprinkle with garlic salt, parmesean, and sesame seeds. Let rise, then bake until golden brown.
+				</p>
+			</div>
+			<div id="i0">
+				<img src="img/recipes/Bread Sticks.jpg">
+			</div>
+		</div>
+
+		<!--------------------------------------->
+
+		<div id="r6" class="b">
+			<h1 id="t6">Banana Nut Bread</h1>
+			<div id="c6">
+				<h4>Ingredients:</h4>
+				<ul type="disc">
+					<li>¼ C shortening</li>
+					<li>¼ C margarine</li>
+					<li>1 C sugar</li>
+					<li>2 eggs</li>
+					<li>2 C flour</li>
+					<li>1 t baking powder</li>
+					<li>1 t baking soda</li>
+					<li>½ t salt</li>
+					<li>1 C banana, mashed</li>
+					<li>½ C walnuts</li>
+					<li>¼ t cinnamon</li>
+					<li>1 t vanilla extract</li>
+					<li>¼ t nutmeg</li>
+				</ul>
+				<br>
+				<h4>Directions</h4>
+				<p>
+					Preheat oven to 350°. Combine all ingredients in large bowl and pour batter into ___ bread pans. Bake for 45 minutes.
+				</p>
+			</div>
+			<div id="i6">
+				<img src="img/recipes/Bread, Banana Nut.jpg">
+			</div>
+		</div>
+
+		<!--------------------------------------->
+
+		<div id="r7" class="b">
+			<h1 id="t7">Classic 100% Whole Wheat Bread</h1>
+			<div id="c7">
+				<h4>Ingredients:</h4>
+				<ul type="disc">
+					<li>1 C water, lukewarm</li>
+					<li>¼ C vegetable oil</li>
+					<li>¼ C honey, molasses, or maple syrup</li>
+					<li>3½ C whole wheat flour</li>
+					<li>2½ t instant yeast<b>can use 1 packet active dry yeast in 2 T water as well!</b></li>
+					<li>¼ C dry milk</li>
+					<li>1¼ t salt</li>
+				</ul>
+				<br>
+				<h4>Directions</h4>
+				<p>
+					In a large bowl or stand mixer, combine all ingredients and stir until dough begins to leave the sides of the bowl. Let rest for 20-30 min to give flour chance to absorb liquid and bran to soften, making it easier to knead.<br>
+					<br>
+					If kneading by hand, transfer dough to a lightly greased surface, oil hands, and knead for 6-8 min, or until smooth and supple. If kneading in a stand mixer, attach dough hook and knead for 5-7 min at low speed, or until dough is soft and smooth. Adjust consistency with additional flour or water as necessary. <br>
+					<br>
+					Transfer to a lightly greased bowl, cover, and let rise until puffy but not necessarily double in size, 1-2 hrs.  Gently deflate dough, transfer to a lightly oiled surface, and shape into an 8" log. Place log in a lightly greased 8½×4½ loaf pan and cover loosely with lightly greased plastic wrap or a reusable cover.<br>					<br>
+					Let rise for 1-2 hrs, or until center has crowned at around 1" above rim of pan. While rising, preheat oven to 350°. Uncover bread, place in oven, and bake for 35-40 min, tenting lightly with tinfoil after 20 min to prevent over-browning. A digital thermometer inserted into loaf's center should register at least 190°.<br>
+					<br>
+					Remove bread from oven and turn out of pan onto a rack to cool.<b>for a soft, flavorful crust, rub top of warm loaf with a stick of butter.</b><br>
+					<br>
+
+				</p>
+			</div>
+			<div id="i7">
+				<img src="img/recipes/Bread, Classic 100_ Whole Wheat (1).jpg">
+				<img src="img/recipes/Bread, Classic 100_ Whole Wheat (2).jpg">
+			</div>
+		</div>
+
+		<!--------------------------------------->
+
+		<div id="r8" class="b">
+			<h1 id="t8">Grandma Val's Homemade Bread</h1>
+			<div id="c8">
+				<h4>Ingredients:</h4>
+				<ul type="disc">
+					<li>3 C milk</li>
+					<li>½ C butter</li>
+					<li>½ C sugar</li>
+					<li>2 C water, cold</li>
+					<li>5 C flour<b>but you'll need WAY more-- see below.</b></li>
+					<li>3 T yeast</li>
+					<li>4 t salt</li>
+				</ul>
+				<br>
+				<h4>Directions</h4>
+				<p>
+					Scald milk, then add butter and sugar. Cook until melted and dissolved, add cold water, and pour into mixer. Add remaining ingredients then mix, adding additional flour until dough feels good. Knead for 5 min and let rise. Preheat oven to 350°. Put in loaf pans and let rise again. Bake for 15-20 min.
+				</p>
+			</div>
+			<div id="i8">
+				<img src="img/recipes/Bread, Homemade.jpg">
+			</div>
+		</div>
+
+		<!--------------------------------------->
+
+		<div id="r9" class="b">
+			<h1 id="t9">Paul's Honey Whole Wheat Bread</h1>
+			<div id="c9">
+				<h4>Ingredients:</h4>
+				<ul type="disc">
+					<li>4½ C all-purpose flour</li>
+					<li>1½ C whole wheat flour</li>
+					<li>½ C wheat germ</li>
+					<li>2 envelopes rapid-rise yeast</li>	
+					<li>1 t salt</li>
+					<li>1 C milk</li>
+					<li>¾ C water</li>
+					<li>½ C honey</li>
+					<li>¾ C butter</li>
+					<li>2 eggs, large</li>
+				</ul>
+				<br>
+				<h4>Directions</h4>
+				<p>
+					Preheat oven to 375°. Combine all dry ingredients (but flour?) in a large bowl. Heat milk, honey, and butter until very warm. Gradually add to flour mixture. Beat for 2 min with electric mixer at medium speed, scraping bowl occasionally. Add eggs and final ½ C flour. Beat for 2 min at high speed, again scraping bowl occasionally. Stir in remaining flour (4C?) to make a stiff batter. Spread evenly into loaf pans. Let rise until doubled in size, about 1 hr. Bake for 40 min. Remove from pans and let cool on wire rack.
+				</p>
+			</div>
+			<div id="i9">
+				<img src="img/recipes/Bread, Honey Whole Wheat.jpg">
+			</div>
+		</div>
+
+		<!--------------------------------------->
+
+		<div id="r10" class="b">
+			<h1 id="t10">Irish Brown Bread</h1>
+			<div id="c10">
+				<h4>Ingredients:¼½¾×</h4>
+				<ul type="disc">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<h4></h4>
+					<ul type="circle">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</ul>
+				<br>
+				<h4>Directions</h4>
+				<p>
+					Preheat oven to °.
+				</p>
+			</div>
+			<div id="i0">
+				<img src="img/recipes/">
+			</div>
+		</div>
+	</div>
+
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		version="1.1"
+		height="0"
+		width="0"
+	>
+		<defs>
+			<filter id="squiggle1">
+				<feTurbulence
+					type="fractalNoise"
+					id="turbulence"
+					baseFrequency=".05"
+					numOctaves="4"
+				/>
+				<feDisplacementMap
+					id="displacement"
+					in="SourceGraphic"
+					scale="4"
+				/>
+			</filter>
+			<filter id="squiggle2">
+				<feTurbulence
+					type="fractalNoise"
+					id="turbulence"
+					baseFrequency=".06"
+					numOctaves="4"
+				/>
+				<feDisplacementMap
+					id="displacement"
+					in="SourceGraphic"
+					scale="5"
+				/>
+			</filter>
+			<filter id="squiggle3">
+				<feTurbulence
+					type="fractalNoise"
+					id="turbulence"
+					baseFrequency=".04"
+					numOctaves="3"
+				/>
+				<feDisplacementMap
+					id="displacement"
+					in="SourceGraphic"
+					scale="6"
+				/>
+			</filter>
+		</defs>
+	</svg>
